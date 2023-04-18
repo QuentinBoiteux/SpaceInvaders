@@ -1,0 +1,339 @@
+@font-face {
+    font-family: 'future';
+    src: url("KILLERBOOTS.TTF");
+    }
+
+#game-container {
+    position: absolute; /* This is needed to position the game elements inside the div */
+    background-size: auto 100vh;
+    min-height: 100%;
+    min-width: 100%;
+    background: url('background.jpg');
+    background-repeat: no-repeat;
+
+
+}
+
+#score{
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 3%;
+    left: 87%;
+    font-size: 2em;
+    font-family: future;
+}
+
+body {
+    font-family: future;
+    overflow:hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #03224C;
+    color:white;
+
+}
+
+.game{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.live1{
+    display: none;
+    top: 1%;
+    left: 16%;
+    position: absolute;
+    background:url('kisspng-heart-love-clip-art-metal-heart-5aad038c6746b4.689968071521288076423.png') ;
+    width: 3%;
+    height: 9%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+.live2{
+    display: none;
+    top: 1%;
+    left: 20%;
+    position: absolute;
+    background:url('kisspng-heart-love-clip-art-metal-heart-5aad038c6746b4.689968071521288076423.png') ;
+    width: 3%;
+    height: 9%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+#invaders-container {
+    /* Styles for the space invaders go here */
+    position: absolute;
+    min-height:30vh;
+    min-width:100vw;
+  
+    
+}
+
+.player{
+    /* Styles for the player's spaceship go here */
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background: url('kisspng-spaceshiptwo-spacecraft-sprite-spaceshipone-portab-space-war-google-playampaposde-uygulamalar-5bd6a481273989.3786541515407934731607.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: none;
+}
+
+.BOSS {
+    background: url('kisspng-sprite-spaceshiptwo-spacecraft-animation-3d-comput-ufo-5ab6110f7a3930.7918188915218813595006.png');
+    height: 150px;
+    width: 150px;
+    background-size: contain;
+    opacity: 1;
+    animation: none;
+}
+
+.invaders{
+    background: url('kisspng-sprite-starship-spacecraft-2d-computer-graphics-5ae3a670a4fa35.8634854115248687206758.png');
+    height:40px;
+    width:40px;
+    background-size:contain;
+    transform: rotate(-90deg);
+    opacity:1;
+    animation: none;
+}
+
+.video{
+    pointer-events: none;
+    display: block;
+}
+
+.video2{
+    pointer-events: none;
+    display: none;
+}
+
+.video3{
+    pointer-events: none;
+    display: none;
+}
+
+
+.skip{
+    opacity: 1;
+    z-index: 2;
+    width:450px;
+    height: 100px;
+    position: absolute;
+    right: 2%; 
+    bottom: 4%;
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+}
+
+.newInvaders{
+    background: url('https://toppng.com/public/uploads/preview/enemy-spaceship-sprite-11562897082efa3h4ejq2.png');
+    height:40px;
+    width:40px;
+    background-size:contain;
+    opacity:1;
+    animation: none;
+}
+
+
+.bullet{
+    border-radius: 30%;
+    position: absolute;
+    background: url('clipart2817987.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    top: 84%;
+    left: 50%;
+    display: none;
+    animation: none;
+}
+
+.pauser{
+    font-family: future;
+    position: absolute;
+    font-size: 150px;
+    left: 21.3%;
+    top: 25%;
+    display: none;
+}
+
+.choose{
+    font-family:'Courier New', Courier, monospace;
+    font-size:50px;
+    margin-top: 28%;
+    margin-left: -0.8%;
+    color: black;
+    font-weight: bolder;  
+    display: none;
+    animation:heart 10s linear infinite ;
+}
+
+.winner {
+    font-family: future;
+    position: absolute;
+    font-size: 150px;
+    left: 32%;
+    top: 30%;
+    display: none;  
+}
+
+.continue {
+    font-family:'Courier New', Courier, monospace;
+    font-size:50px;
+    margin-top: 27%;
+    margin-left: -0.8%;
+    color: black;
+    font-weight: bolder;  
+    display: none;
+    animation:heart 10s linear infinite ;
+}
+
+.playAgain {
+    display: none;
+    animation:heart 10s linear infinite;
+    font-family:'Courier New', Courier, monospace;
+    font-size:50px;
+    margin-top: 1%;
+    margin-left: -2%;
+    color: black;
+    font-weight: bolder;
+}
+
+#startScreen{
+    position: absolute;
+    top: -10%;
+    left: 3.3%;
+    display: block;
+}
+
+.gameTitle{
+    font-size: 100px;
+    font-family:future;
+}
+
+.press{
+    animation:heart 10s linear infinite;
+    font-family:'Courier New', Courier, monospace;
+    font-size:50px;
+    margin-top: -5%;
+    margin-left: -3%;
+    color: black;
+    font-weight: bolder;
+}
+
+#audio{
+    display: none;
+    height: 200px;
+    width: 200px;
+}
+
+.bim{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: green;
+}
+
+#gameOver{
+    font-family: future;
+    position: absolute;
+    font-size: 80px;
+    left: 23%;
+    top: 18%;
+    z-index: 5;
+    display: none;
+}
+
+ 
+
+
+#timer{
+    display: none;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    font-size: 2em;
+    font-family: future;
+}
+
+.invader-shot {
+    background: url('Green-Laser-PNG-Image-Background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width:60px;
+    height:20px;
+    transform:rotate(90deg);
+
+}
+
+.blink {
+    animation: blink 0.6s;
+}
+
+@keyframes blink { 
+    0% { opacity:0; }
+    13% { opacity:1; } 
+    26% { opacity:0; }
+    40% { opacity:1; }
+    53% { opacity:0; }
+    66% { opacity:1; } 
+    80% { opacity:0; }
+    100% { opacity:1; }
+  }
+
+  @keyframes heart { 
+    0% { opacity:1; }
+    5% { opacity:0.5; } 
+    10% { opacity:1; }
+    15% { opacity:0.5; }
+    20% { opacity:1; }
+    25% { opacity:0.5; } 
+    30% { opacity:1; }
+    35% { opacity:0.5; }
+    40% { opacity:1; }
+    45% { opacity:0.5; } 
+    50% { opacity:1; }
+    55% { opacity:0.5; }
+    60% { opacity:1; }
+    65% { opacity:0.5; } 
+    70% { opacity:1; }
+    75% { opacity:0.5; }
+    80% { opacity:1; } 
+    85% { opacity:0.5; }
+    90% { opacity:1; }
+    95% { opacity:0.5; }
+    100% { opacity:1; } 
+  }
+
+  @keyframes boom{
+      0%{background:url('explosion.gif');
+        background-size: contain;}
+        50%{background:url('explosion.gif');
+            background-size: contain;}
+        100%{background:url('explosion.gif');
+            background-size: contain;}
+  }
+
+  @keyframes laserBoom{
+    0%{background:url('Xexplosion.gif');
+      background-size: contain;}
+      50%{background:url('Xexplosion.gif');
+          background-size: contain;}
+      100%{background:url('Xexplosion.gif');
+          background-size: contain;}
+}

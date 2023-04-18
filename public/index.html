@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Space Invaders</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="text-align:center">
+  <video controls width="100%" class="video">
+
+    <source src="Space invaders ‐ Réalisée avec Clipchamp.mp4" type="video/mp4">
+  </video>
+  <div class="skip">PRESS S TO SKIP</div>
+  <video controls width="100%" class="video2">
+    <source src="BOSS-INCOMING.mp4" type="video/mp4">
+  </video>
+  <video controls width="100%" class="video3">
+    <source src="Conclusion ‐ Réalisée avec Clipchamp.mp4" type="video/mp4">
+  </video>
+  <div class="game">
+    <h1>Space Invaders</h1>
+    <div id="score">score: 0</div>
+    <div id="lives">
+      <div class="live1"></div>
+      <div class="live2"></div>
+    </div>
+    <div id="timer">02:00</div>
+    <div id="game-container">
+      <div id="gameOver">
+        <div class="Over-Title">
+          <h1>GAME OVER</h1>
+        </div>
+        <div class="press">
+          <p>press A to restart</p>
+        </div>
+      </div>
+      <div id="startScreen">
+        <div class="gameTitle">
+          <h1>SPACE INVADERS</h1>
+        </div>
+        <div class="press">
+          <p>press SPACEBAR to start</p>
+        </div>
+      </div>
+      <div class="player"> </div>
+      <div id="invaders-container">
+      </div>
+      <div class="bullet"></div>
+      <div class="pause">
+        <div class="pauser">GAME PAUSED</div>
+        <div class="choose">press P to resume or A to restart</div>
+      </div>
+      <div id="win">
+        <div class="winner">YOU WIN</div>
+        <button class="visibleForm">Scorboard</button>
+        <form class="formBox" action="/submit" method="POST">
+          <input class="theName" type="text" name="theName" placeholder="Entrez votre Pseudo" required>
+          <input class="theScore" type="text" name="theScore" hidden>
+          <input class="theTimer" type="text" name="theTimer" hidden>
+          <input class="submitBtn" type="submit" value="Send">
+        </form>
+        <div class="continue"></div>
+        <div class="playAgain">press A to play again</div>
+      </div>
+      <div class="leaderBoard">
+        <div class="storage"></div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"> </script>
+</body>
+
+</html>

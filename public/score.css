@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'future';
+    src: url("KILLERBOOTS.TTF");
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 25px;
+    color: white;
+    font-family: future;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: url('background.jpg');
+    background-repeat: no-repeat;
+}
+
+.gold{
+    color: goldenrod;
+}
+.goldnew{
+    color: rgb(154, 115, 15);
+}
+
+.red{
+ color: rgb(235, 56, 56);
+}
+
+.blue{
+    color: rgb(45, 130, 243);
+}
+
+.box{
+    display: flex;
+    font-size: 35px;
+    justify-content: center;
+    width: 50%;
+    height: 670px;
+    overflow: scroll;
+    overflow-y: auto;
+    max-height: 700px;
+    background-color: #03214ce8;
+    border: 4px solid white;
+    border-radius: 15px;
+}
+
+.congratz{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    position: relative;
+    font-size: 25px;
+    bottom: 15px;
+}

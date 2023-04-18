@@ -1,0 +1,32 @@
+{{define "scores"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="score.css">
+    <title>ScoreBoard</title>
+</head>
+
+<body>
+    <h1>ScoreBoard</h1>
+    <div class="congratz">Felicitations vous etes <span class="gold">rang {{ .Rank }}</span>, soit dans les <span class="goldnew">{{ .Percentile }}%</span> des joueurs.</div>
+    <div class="box" style="overflow-y:scroll;">
+        <div class="score">
+            {{range .Scores}}
+            <div class="scoreBox">
+                <p class="rank">Rang: <span class="gold">{{.Rank}}</span></p>
+                <p class="name">Pseudo: <span class="red">{{.Name}}</span></p>
+                <p class="score">Score: <span class="blue">{{.Score}}</span></p>
+                <p class="time">Time: {{.Timer}} Seconds</p>
+                <p>------------------------</p>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</body>
+
+</html>
+{{end}}
